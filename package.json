@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "olive-helps-hub",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Open Olive developer hub page",
   "version": "0.1.0",
-  "license": "0BSD",
+  "license": "no license",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
