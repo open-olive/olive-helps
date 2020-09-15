@@ -7,5 +7,5 @@
 module.exports = {
   /* Your site config here */
   plugins: ['gatsby-plugin-sass'],
-  pathPrefix: '/open-olive'
+  pathPrefix: '/olive-helps'
 }
