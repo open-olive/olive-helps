@@ -15,6 +15,15 @@
 .downloadCollection {
   display: flex;
   justify-content: space-between;
+  @include mobile() {
+    flex-direction: column;
+  }
+}
+
+.headerImage {
+  @include desktop() {
+    max-width: 500px;
+  }
 }
 
 .downloadItem {
