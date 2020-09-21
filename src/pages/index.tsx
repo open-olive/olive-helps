@@ -8,9 +8,10 @@ import {
   downloadLinuxUrl,
   downloadMacUrl,
   downloadWindowsUrl,
-  goGitHubUrl, goLDKUrl,
+  goGitHubUrl,
+  goLDKUrl,
   nodeGitHubUrl,
-  nodeLDKUrl
+  nodeLDKUrl,
 } from "../references"
 import { Section } from "../components/section"
 
@@ -63,7 +64,8 @@ export default function Home() {
             <h3 className={styles.languageTitle}>Go</h3>
             <a href={goGitHubUrl} className={styles.ldkLink}>
               GitHub
-            </a><br/>
+            </a>
+            <br />
             <a href={goLDKUrl} className={styles.ldkLink}>
               Documentation
             </a>
