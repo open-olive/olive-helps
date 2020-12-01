@@ -5,7 +5,6 @@ import "./index.scss"
 import { PageHeader } from "../components/page-header"
 import OliveHelpsLogo from "../components/olive-helps-logo"
 import {
-  downloadLinuxUrl,
   downloadMacUrl,
   downloadWindowsUrl,
   goGitHubUrl,
@@ -37,11 +36,6 @@ export default function Home() {
           <article className={styles.downloadItem}>
             <a className={styles.downloadLink} href={downloadMacUrl}>
               MacOS
-            </a>
-          </article>
-          <article className={styles.downloadItem}>
-            <a className={styles.downloadLink} href={downloadLinuxUrl}>
-              Linux
             </a>
           </article>
         </div>

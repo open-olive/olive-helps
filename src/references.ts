@@ -1,5 +1,4 @@
 export const downloadWindowsUrl = "https://olive.page.link/olive-helps-windows"
-export const downloadLinuxUrl = "https://olive.page.link/olive-helps-linux"
 export const downloadMacUrl = "https://olive.page.link/olive-helps-mac"
 export const nodeGitHubUrl =
   "https://github.com/open-olive/loop-development-kit-node"
