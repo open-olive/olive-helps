@@ -5,20 +5,44 @@ import "./index.scss"
 import { PageHeader } from "../components/page-header"
 import OliveHelpsLogo from "../components/olive-helps-logo"
 import {
-  downloadLinuxUrl,
+  dotNetLDKUrl,
   downloadMacUrl,
   downloadWindowsUrl,
   goGitHubUrl,
   goLDKUrl,
   nodeGitHubUrl,
-  nodeLDKUrl,
 } from "../references"
 import { Section } from "../components/section"
+
+interface LanguageBlockProps {
+  language: string
+  repoURL: string
+  docURL?: string
+  docURLNotice?: string
+}
+
+const LanguageBlock: React.FunctionComponent<LanguageBlockProps> = props => (
+  <article className={styles.downloadItem}>
+    <h3 className={styles.languageTitle}>{props.language}</h3>
+    <a href={props.repoURL} className={styles.ldkLink}>
+      GitHub
+    </a>
+    <br />
+    {props.docURL && (
+      <a href={props.docURL} className={styles.ldkLink}>
+        Documentation
+      </a>
+    )}
+    {props.docURLNotice && (
+      <span className={styles.ldkLink}>{props.docURLNotice}</span>
+    )}
+  </article>
+)
 
 export default function Home() {
   const title = (
     <>
-      <OliveHelpsLogo className={styles.headerImage}/> <br />
+      <OliveHelpsLogo className={styles.headerImage} /> <br />
       Developer Hub
     </>
   )
@@ -39,37 +63,23 @@ export default function Home() {
               MacOS
             </a>
           </article>
-          <article className={styles.downloadItem}>
-            <a className={styles.downloadLink} href={downloadLinuxUrl}>
-              Linux
-            </a>
-          </article>
         </div>
       </Section>
       <Section sectionClassName={styles.alternatingSectionBackground}>
         <h2 className={styles.sectionTitle}>Get the LDK</h2>
         <p>Get the LDK and start building!</p>
         <div className={styles.downloadCollection}>
-          <article className={styles.downloadItem}>
-            <h3 className={styles.languageTitle}>Node</h3>
-            <a href={nodeGitHubUrl} className={styles.ldkLink}>
-              GitHub
-            </a>
-            <br />
-            <a href={nodeLDKUrl} className={styles.ldkLink}>
-              Documentation
-            </a>
-          </article>
-          <article className={styles.downloadItem}>
-            <h3 className={styles.languageTitle}>Go</h3>
-            <a href={goGitHubUrl} className={styles.ldkLink}>
-              GitHub
-            </a>
-            <br />
-            <a href={goLDKUrl} className={styles.ldkLink}>
-              Documentation
-            </a>
-          </article>
+          <LanguageBlock
+            language="Go"
+            repoURL={goGitHubUrl}
+            docURL={goLDKUrl}
+          />
+          <LanguageBlock language=".Net" repoURL={dotNetLDKUrl} />
+          <LanguageBlock
+            language="Node"
+            repoURL={nodeGitHubUrl}
+            docURLNotice="Documentation Coming Soon!"
+          />
         </div>
       </Section>
       <Section>
