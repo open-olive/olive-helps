@@ -4,14 +4,7 @@ import styles from "./index.module.scss"
 import "./index.scss"
 import { PageHeader } from "../components/page-header"
 import OliveHelpsLogo from "../components/olive-helps-logo"
-import {
-  dotNetLDKUrl,
-  downloadMacUrl,
-  downloadWindowsUrl,
-  goGitHubUrl,
-  goLDKUrl,
-  nodeGitHubUrl,
-} from "../references"
+import { languages, downloadMacUrl, downloadWindowsUrl } from "../references"
 import { Section } from "../components/section"
 
 interface LanguageBlockProps {
@@ -69,17 +62,9 @@ export default function Home() {
         <h2 className={styles.sectionTitle}>Get the LDK</h2>
         <p>Get the LDK and start building!</p>
         <div className={styles.downloadCollection}>
-          <LanguageBlock
-            language="Go"
-            repoURL={goGitHubUrl}
-            docURL={goLDKUrl}
-          />
-          <LanguageBlock language=".Net" repoURL={dotNetLDKUrl} />
-          <LanguageBlock
-            language="Node"
-            repoURL={nodeGitHubUrl}
-            docURLNotice="Documentation Coming Soon!"
-          />
+          {languages.map(language => (
+            <LanguageBlock {...language} />
+          ))}
         </div>
       </Section>
       <Section>
