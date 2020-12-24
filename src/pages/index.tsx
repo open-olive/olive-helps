@@ -63,7 +63,7 @@ export default function Home() {
         <p>Get the LDK and start building!</p>
         <div className={styles.downloadCollection}>
           {languages.map(language => (
-            <LanguageBlock {...language} />
+            <LanguageBlock {...language} key={language.language} />
           ))}
         </div>
       </Section>
