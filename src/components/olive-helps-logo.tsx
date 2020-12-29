@@ -15,5 +15,5 @@ export default ({ className }: { className?: string }) => {
     }
   `)
 
-  return <Img fluid={data.file.childImageSharp.fluid} className={className}/>
+  return <Img fluid={data.file.childImageSharp.fluid} className={className} />
 }
