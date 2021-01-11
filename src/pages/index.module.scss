@@ -12,12 +12,20 @@
   color: $primaryThemeColor;
 }
 
-.downloadCollection {
+.downloadCollection, .sensorCollection, .sensorMemberCollection {
   display: flex;
   justify-content: space-between;
   @include mobile() {
     flex-direction: column;
   }
+}
+
+.sensorCollection, .sensorMemberCollection {
+  flex-direction: column;
+}
+
+.sensorItem {
+  margin-top: 1rem;
 }
 
 .headerImage {
@@ -32,7 +40,7 @@
   text-align: center;
 }
 
-.downloadLink {
+.downloadLink, .sensorTitle {
   font-size: $threeXlFontSize;
 }
 

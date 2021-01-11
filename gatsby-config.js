@@ -12,6 +12,7 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-anchor-links",
     {
       resolve: "gatsby-source-filesystem",
       options: {
