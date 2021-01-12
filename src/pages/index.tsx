@@ -73,21 +73,21 @@ export default function Home() {
         <p>Details on available and future sensors.</p>
         <div className={styles.sensorCollection}>
           <article className={styles.sensorItem}>
-            <AnchorLink to="#keyboard" className={styles.sensorTitle}>Keyboard</AnchorLink>
+            <AnchorLink to="/#keyboard" className={styles.sensorTitle}>Keyboard</AnchorLink>
             <p>Sensor that provides the ability to subscribe to updates for a variety of keyboard events.</p>
             <div className={styles.sensorMemberCollection}>
               <article className={styles.sensorMember}>
-                <AnchorLink to="#keyboard-hotkey" className={styles.sensorMemberTitle}>Hot Keys</AnchorLink>
+                <AnchorLink to="/#keyboard-hotkey" className={styles.sensorMemberTitle}>Hot Keys</AnchorLink>
                 <p>An event that is sent when a configurable set of keys are pressed and released.</p>
                 <p>Example: "Hey Loop, let me know when Ctrl+Alt+f is pressed, as well as when it's released."</p>
               </article>
               <article className={styles.sensorMember}>
-                <AnchorLink to="#keyboard-scan-codes" className={styles.sensorMemberTitle}>Scancodes</AnchorLink>
+                <AnchorLink to="/#keyboard-scan-codes" className={styles.sensorMemberTitle}>Scancodes</AnchorLink>
                 <p>An event that is sent when specific scan codes are pressed and released. ### some sort of link to scan code docs ###</p>
                 <p>Example: "Hey Loop, let me know scancodes are pressed"</p>
               </article>
               <article className={styles.sensorMember}>
-                <AnchorLink to="#keyboard-text" className={styles.sensorMemberTitle}>Text</AnchorLink>
+                <AnchorLink to="/#keyboard-text" className={styles.sensorMemberTitle}>Text</AnchorLink>
                 <p>An event that is sent when text has been entered on the keyboard.</p>
                 <p>Example: "Hey Loop, send me the text that is being typed."</p>
                 <h4>Technical notes:</h4>
@@ -107,7 +107,7 @@ export default function Home() {
                 </ul>
               </article>
               <article className={styles.sensorMember}>
-                <AnchorLink to="#keyboard-char" className={styles.sensorMemberTitle}>Characters</AnchorLink>
+                <AnchorLink to="/#keyboard-char" className={styles.sensorMemberTitle}>Characters</AnchorLink>
                 <p>An event that is sent when individual characters have been entered on the keyboard.</p>
                 <p>Example: "Hey Loop, send me every single character that is pressed from now until infinity."</p>
                 <h4>Technical notes:</h4>
@@ -126,7 +126,7 @@ export default function Home() {
             </div>
           </article>
           <article className={styles.sensorItem}>
-            <AnchorLink to="#file-system" className={styles.sensorTitle}>File System</AnchorLink>
+            <AnchorLink to="/#file-system" className={styles.sensorTitle}>File System</AnchorLink>
             <p>Sensor that provides the ability to subscribe to updates file and directory events as well as the ability to read/write/delete a single file.</p>
             <p>Etc...</p>
           </article>
